@@ -35,21 +35,23 @@ void loop() {
   Serial.print(distance);
   Serial.println(" cm");
 
-  if (distance > 20) {
+  if (distance > 15) {
     // 장애물 없음 → 정회전
     digitalWrite(AA, HIGH);
+    analogWrite(AA, 80);
     digitalWrite(AB, LOW);
   } else {
     // 장애물 감지
     // 정지
     digitalWrite(AA, LOW);
     digitalWrite(AB, LOW);
-    delay(300);
+    delay(1000);
 
     // 역회전
     digitalWrite(AA, LOW);
+    analogWrite(AA, 80);
     digitalWrite(AB, HIGH);
-    delay(700);
+    delay(1000);
   }
 
   delay(100);
