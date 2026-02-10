@@ -44,7 +44,7 @@ void loop() {
     // 정지
     digitalWrite(AA, LOW);
     digitalWrite(AB, LOW);
-    delay(1000);
+    delay(300);
 
     // 역회전
     digitalWrite(AA, LOW);
