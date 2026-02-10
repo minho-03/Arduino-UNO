@@ -1,6 +1,6 @@
 int led = 9;         
 int brightness = 0;  
-int fadeAmount = 5;  
+int fadeAmount = 255;  
 
 void setup() {
   pinMode(led, OUTPUT);
